@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+    <div class="container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="form" id="form">
+            <h2 class="tile">Get In Touch</h2>
+            <hr>
+            <input type="hidden" name="access_key" value="6dfef4b9-9414-4587-bcd4-f43486599629">
+            <input type="text" name="name" placeholder="Enter your name" class="content-input" required>
+            <input type="email" name="emil" placeholder="Enter your email" class="content-input" required>
+            <textarea name="message" placeholder="Enter your email" required></textarea>
+            <button type="submit" id="open-btn">Submit</button>
+        </form>
+    </div>
+
+    <div class="popup" id="popup">
+        <img src="./Image/checked.png" alt="">
+        <h2>Thank You</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, sed!</p>
+        <button id="close-btn">Ok</button>
+    </div>
+</body>
+<script>
+    let openBtn = document.getElementById("open-btn");
+    let closeBtn = document.getElementById("close-btn")
+    let popup = document.getElementById("popup")
+    let form = document.getElementById("form")
+
+    openBtn.addEventListener("click", function(){
+        popup.classList.add("open-btn")
+        form.style.display="none"
+    })
+    closeBtn.addEventListener("click", function(){
+        popup.classList.remove("open-btn")
+    })
+
+
+
+</script>
+</html>
